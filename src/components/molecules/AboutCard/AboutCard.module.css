@@ -1,0 +1,45 @@
+.aboutCard {
+  min-height: 205px;
+  padding: 22px;
+  border: 1px solid #0b4f80;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #061b31, #04162a);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutCard:hover {
+  border-color: #19d9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(25, 217, 255, 0.12);
+}
+
+.icon {
+  width: 39px;
+  height: 39px;
+  color: #0fbfff;
+}
+
+.title {
+  margin: 16px 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f4f8ff;
+}
+
+.desc {
+  margin: 0;
+  color: #a9bac9;
+  font-size: 13px;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin-top: 13px;
+  background: #15d4ff;
+}

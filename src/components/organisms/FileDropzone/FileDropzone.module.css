@@ -1,0 +1,116 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+
+.zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 19rem;
+  gap: var(--s8);
+  padding: var(--s40) var(--s24);
+  border: 1px dashed hsl(var(--primary) / 0.38);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(hsl(var(--primary) / 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary) / 0.025) 1px, transparent 1px),
+    hsl(var(--muted) / 0.34);
+  background-size: 22px 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.zone:hover,
+.dragging {
+  border-color: hsl(var(--primary));
+  background-color: hsl(var(--primary) / 0.055);
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.icon {
+  display: flex;
+  height: var(--s48);
+  width: var(--s48);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(var(--primary) / 0.2);
+  border-radius: 14px;
+  background: hsl(var(--primary) / 0.09);
+  color: hsl(var(--primary));
+  margin-bottom: var(--s6);
+}
+
+.title {
+  font-size: var(--fs15);
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.sub {
+  font-size: var(--fs12);
+  color: hsl(var(--muted-foreground));
+}
+
+.previewRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s16);
+  padding: var(--s12);
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  background: hsl(var(--card));
+}
+
+.preview {
+  height: 72px;
+  width: 72px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
+  background: hsl(var(--muted));
+}
+
+.meta {
+  min-width: 0;
+  flex: 1;
+}
+
+.name {
+  font-size: var(--fs14);
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--s32);
+  width: var(--s32);
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+}
+
+.remove:hover {
+  color: hsl(var(--destructive));
+  border-color: hsl(var(--destructive) / 0.4);
+}
+
+.error {
+  font-size: var(--fs12);
+  color: hsl(var(--destructive));
+}

@@ -1,0 +1,117 @@
+.futureBanner {
+  border-bottom: 1px solid #0a3b61;
+  background: #031526;
+  padding: 30px 0;
+}
+
+.shell {
+  width: min(calc(100% - 80px), 1440px);
+  margin: 0 auto;
+}
+
+.futureInner {
+  min-height: 162px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr 1.25fr 1fr;
+  align-items: center;
+  gap: 26px;
+}
+
+.futureTitle h2 {
+  margin: 0;
+  font-size: 37px;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  font-weight: 750;
+}
+
+.futureCopy p {
+  margin: 0 0 15px;
+  color: #a3b6c7;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.outlineBtn {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 15px;
+  border: 1px solid #1684c9;
+  border-radius: 999px;
+  color: #1dcfff;
+  font-size: 11px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.outlineBtn:hover {
+  background: rgba(29, 207, 255, 0.12);
+  border-color: #1dcfff;
+  transform: translateY(-2px);
+}
+
+.valuesList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #b4c4d2;
+  font-size: 11px;
+}
+
+.valueIcon {
+  width: 17px;
+  height: 17px;
+  color: #14ceff;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1180px) {
+  .shell {
+    width: min(calc(100% - 48px), 1440px);
+  }
+  .futureInner {
+    grid-template-columns: 1fr 1.3fr 1fr;
+  }
+  .valuesList {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .futureInner {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .futureCopy {
+    grid-column: 1 / -1;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .shell {
+    width: min(calc(100% - 28px), 1440px);
+  }
+  .futureInner {
+    grid-template-columns: 1fr;
+  }
+  .futureCopy {
+    grid-column: auto;
+  }
+  .futureTitle h2 {
+    font-size: 32px;
+  }
+}

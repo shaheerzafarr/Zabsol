@@ -1,0 +1,73 @@
+.serviceStrip {
+  border-bottom: 1px solid #0a3559;
+  background: #021427;
+}
+
+.shell {
+  width: min(calc(100% - 80px), 1440px);
+  margin: 0 auto;
+}
+
+.serviceStripInner {
+  min-height: 74px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.stripItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 0 18px;
+  font-size: 12px;
+  font-weight: 650;
+  color: #f4f8ff;
+  transition: background 0.2s ease;
+}
+
+.stripItem:hover {
+  background: rgba(31, 213, 255, 0.05);
+}
+
+.stripItem + .stripItem {
+  border-left: 1px solid #0a3a60;
+}
+
+.stripIcon {
+  width: 23px;
+  height: 23px;
+  color: #1fd5ff;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1180px) {
+  .shell {
+    width: min(calc(100% - 48px), 1440px);
+  }
+  .serviceStripInner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stripItem {
+    min-height: 64px;
+  }
+}
+
+@media (max-width: 900px) {
+  .serviceStripInner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .shell {
+    width: min(calc(100% - 28px), 1440px);
+  }
+  .serviceStripInner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stripItem {
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+}

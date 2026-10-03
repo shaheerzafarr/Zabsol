@@ -1,0 +1,168 @@
+.header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 50;
+  border-bottom: 1px solid transparent;
+  width: 100%;
+}
+
+.shell {
+  width: min(calc(100% - 80px), 1440px);
+  margin: 0 auto;
+}
+
+.nav {
+  height: 94px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: max-content;
+  text-decoration: none;
+}
+
+.brandLogo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.brandText {
+  display: grid;
+  line-height: 0.95;
+}
+
+.brandText strong {
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.brandText small {
+  margin-top: 7px;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  color: #8bb3cf;
+}
+
+.navLinks {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  font-size: 13px;
+  color: #d3e1ed;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.navLinks a:hover {
+  color: #29dcff;
+}
+
+.navCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 28px;
+  padding: 14px 21px;
+  border: 1px solid #168ddd;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 1px rgba(22, 141, 221, 0.1);
+  transition: all 0.2s ease;
+}
+
+.navCta:hover {
+  background: rgba(22, 141, 221, 0.15);
+  border-color: #29dcff;
+  color: #29dcff;
+}
+
+.menu {
+  display: none;
+  margin-left: auto;
+  color: #ffffff;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+}
+
+@media (max-width: 1180px) {
+  .shell {
+    width: min(calc(100% - 48px), 1440px);
+  }
+  .navLinks {
+    gap: 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navLinks {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 82px;
+    display: none;
+    padding: 16px;
+    border: 1px solid #0c4d7d;
+    border-radius: 12px;
+    background: #041629;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.65);
+    z-index: 100;
+  }
+
+  .navLinks.open {
+    display: grid;
+    gap: 6px;
+  }
+
+  .navLinks a {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .navLinks a:hover {
+    background: rgba(41, 220, 255, 0.08);
+  }
+
+  .navCta {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 620px) {
+  .shell {
+    width: min(calc(100% - 28px), 1440px);
+  }
+  .nav {
+    height: 78px;
+  }
+  .brandLogo {
+    width: 44px;
+    height: 44px;
+  }
+  .brandText strong {
+    font-size: 19px;
+  }
+  .brandText small {
+    font-size: 7px;
+  }
+}

@@ -1,0 +1,49 @@
+.badge {
+  min-width: 130px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid #0d5688;
+  border-radius: 999px;
+  color: #d5e3ee;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(3, 20, 38, 0.6);
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  border-color: #19d9ff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(25, 217, 255, 0.15);
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 11px;
+  background: #0b1d2e;
+  color: #f4f8ff;
+  border: 1px solid #47718d;
+}
+
+.accent .avatar {
+  color: #19d9ff;
+  border-color: #0ea2d9;
+  background: rgba(14, 162, 217, 0.15);
+}
+
+@media (max-width: 620px) {
+  .badge {
+    min-width: calc(50% - 6px);
+    padding: 10px 12px;
+  }
+}

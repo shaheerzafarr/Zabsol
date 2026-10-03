@@ -1,0 +1,198 @@
+/**
+ * Flat key dictionaries for UI chrome (navigation, actions, labels).
+ */
+export const en = {
+  // App
+  "app.name": "Boilerplate App",
+  "app.tagline": "Modern Application Starter",
+
+  // Navigation
+  "nav.dashboard": "Dashboard",
+  "nav.users": "Users",
+  "nav.settings": "Settings",
+  "nav.docs": "Documentation",
+  "nav.section.main": "Main",
+  "nav.section.manage": "Manage",
+  "nav.section.system": "System",
+
+  // Common actions
+  "action.add": "Add",
+  "action.create": "Create",
+  "action.edit": "Edit",
+  "action.delete": "Delete",
+  "action.save": "Save Changes",
+  "action.cancel": "Cancel",
+  "action.search": "Search",
+  "action.filter": "Filter",
+  "action.export": "Export",
+  "action.view": "View",
+  "action.viewAll": "View all",
+  "action.back": "Back",
+  "action.confirm": "Confirm",
+  "action.reset": "Reset",
+  "action.clearFilters": "Clear filters",
+
+  // Common labels
+  "label.status": "Status",
+  "label.active": "Active",
+  "label.inactive": "Inactive",
+  "label.all": "All",
+  "label.name": "Name",
+  "label.email": "Email",
+  "label.actions": "Actions",
+  "label.english": "English",
+  "label.arabic": "Arabic (العربية)",
+  "label.optional": "Optional",
+  "label.required": "Required",
+  "label.results": "results",
+  "label.noResults": "No results found",
+  "label.rowsPerPage": "Rows per page",
+  "label.of": "of",
+
+  // Search
+  "search.placeholder": "Search...",
+
+  // Dashboard
+  "dash.title": "Dashboard",
+  "dash.subtitle": "Overview of your application.",
+
+  // Settings
+  "settings.title": "Settings",
+  "settings.subtitle": "Configure application preferences.",
+
+  // Auth
+  "auth.language.switch": "Switch language",
+  "auth.login.title": "Sign in to your account",
+  "auth.login.subtitle": "Welcome back! Please enter your details.",
+  "auth.login.submit": "Sign In",
+  "auth.login.forgot": "Forgot password",
+  "auth.login.noAccount": "Don't have an account?",
+  "auth.login.signUp": "Sign up",
+  "auth.login.success": "Login successful!",
+  "auth.register.title": "Create your account",
+  "auth.register.subtitle": "Get started with your new account.",
+  "auth.register.submit": "Create Account",
+  "auth.register.haveAccount": "Already have an account?",
+  "auth.register.logIn": "Log in",
+  "auth.forgot.title": "Forgot your password?",
+  "auth.forgot.subtitle": "Enter your registered email address.",
+  "auth.forgot.submit": "Send OTP",
+  "auth.forgot.back": "Back to Login",
+  "auth.forgot.success": "OTP sent to your email.",
+  "auth.reset.title": "Reset Password",
+  "auth.reset.subtitle": "Enter your new password below.",
+  "auth.reset.submit": "Update Password",
+  "auth.reset.success": "Password reset successfully!",
+  "auth.otp.title": "Enter Verification Code",
+  "auth.otp.subtitle": "We've sent a code to your email",
+  "auth.otp.resend": "Resend Code",
+  "auth.otp.submit": "Verify Code",
+  "auth.otp.success": "Verified successfully!",
+
+  // Fields & Validation
+  "auth.field.email": "Email",
+  "auth.field.email.placeholder": "Enter your email",
+  "auth.field.password": "Password",
+  "auth.field.password.placeholder": "Enter your password",
+  "auth.validation.email.required": "Email is required",
+  "auth.validation.email.invalid": "Invalid email address",
+  "auth.validation.password.required": "Password is required",
+
+  // States
+  "state.loading": "Loading…",
+  "state.empty": "Nothing here yet",
+};
+
+export const ar = {
+  "app.name": "قالب التطبيق",
+  "app.tagline": "قالب تطبيق حديث",
+
+  "nav.dashboard": "لوحة التحكم",
+  "nav.users": "المستخدمون",
+  "nav.settings": "الإعدادات",
+  "nav.docs": "التوثيق",
+  "nav.section.main": "الرئيسية",
+  "nav.section.manage": "الإدارة",
+  "nav.section.system": "النظام",
+
+  "action.add": "إضافة",
+  "action.create": "إنشاء",
+  "action.edit": "تعديل",
+  "action.delete": "حذف",
+  "action.save": "حفظ",
+  "action.cancel": "إلغاء",
+  "action.search": "بحث",
+  "action.filter": "تصفية",
+  "action.export": "تصدير",
+  "action.view": "عرض",
+  "action.viewAll": "عرض الكل",
+  "action.back": "رجوع",
+  "action.confirm": "تأكيد",
+  "action.reset": "إعادة تعيين",
+  "action.clearFilters": "مسح التصفية",
+
+  "label.status": "الحالة",
+  "label.active": "نشط",
+  "label.inactive": "غير نشط",
+  "label.all": "الكل",
+  "label.name": "الاسم",
+  "label.email": "البريد الإلكتروني",
+  "label.actions": "إجراءات",
+  "label.english": "الإنجليزية",
+  "label.arabic": "العربية",
+  "label.optional": "اختياري",
+  "label.required": "مطلوب",
+  "label.results": "نتيجة",
+  "label.noResults": "لا توجد نتائج",
+  "label.rowsPerPage": "صفوف لكل صفحة",
+  "label.of": "من",
+
+  "search.placeholder": "بحث...",
+
+  "dash.title": "لوحة التحكم",
+  "dash.subtitle": "نظرة عامة على التطبيق.",
+
+  "settings.title": "الإعدادات",
+  "settings.subtitle": "إعدادات التطبيق.",
+
+  "auth.language.switch": "تبديل اللغة",
+  "auth.login.title": "تسجيل الدخول إلى حسابك",
+  "auth.login.subtitle": "مرحباً بعودتك! يرجى إدخال بياناتك.",
+  "auth.login.submit": "تسجيل الدخول",
+  "auth.login.forgot": "نسيت كلمة المرور",
+  "auth.login.noAccount": "ليس لديك حساب؟",
+  "auth.login.signUp": "إنشاء حساب",
+  "auth.login.success": "تم تسجيل الدخول بنجاح!",
+  "auth.register.title": "إنشاء حساب جديد",
+  "auth.register.subtitle": "ابدأ الآن.",
+  "auth.register.submit": "إنشاء الحساب",
+  "auth.register.haveAccount": "لديك حساب بالفعل؟",
+  "auth.register.logIn": "تسجيل الدخول",
+  "auth.forgot.title": "نسيت كلمة المرور؟",
+  "auth.forgot.subtitle": "أدخل بريدك الإلكتروني المسجل.",
+  "auth.forgot.submit": "إرسال الرمز",
+  "auth.forgot.back": "العودة لتسجيل الدخول",
+  "auth.forgot.success": "تم إرسال رمز التحقق.",
+  "auth.reset.title": "إعادة تعيين كلمة المرور",
+  "auth.reset.subtitle": "أدخل كلمة المرور الجديدة.",
+  "auth.reset.submit": "تحديث كلمة المرور",
+  "auth.reset.success": "تم تغيير كلمة المرور بنجاح!",
+  "auth.otp.title": "أدخل رمز التحقق",
+  "auth.otp.subtitle": "تم إرسال رمز إلى بريدك الإلكتروني",
+  "auth.otp.resend": "إعادة إرسال الرمز",
+  "auth.otp.submit": "تأكيد الرمز",
+  "auth.otp.success": "تم التحقق بنجاح!",
+
+  "auth.field.email": "البريد الإلكتروني",
+  "auth.field.email.placeholder": "أدخل بريدك الإلكتروني",
+  "auth.field.password": "كلمة المرور",
+  "auth.field.password.placeholder": "أدخل كلمة المرور",
+  "auth.validation.email.required": "البريد الإلكتروني مطلوب",
+  "auth.validation.email.invalid": "البريد الإلكتروني غير صالح",
+  "auth.validation.password.required": "كلمة المرور مطلوبة",
+
+  "state.loading": "جارٍ التحميل…",
+  "state.empty": "لا يوجد شيء بعد",
+};
+
+export const dictionaries = { en, ar };

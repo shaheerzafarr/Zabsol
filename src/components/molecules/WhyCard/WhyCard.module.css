@@ -1,0 +1,43 @@
+.whyCard {
+  padding: 0 34px;
+  border-left: 1px solid #0b416b;
+  transition: all 0.2s ease;
+}
+
+.whyCard:hover {
+  transform: translateY(-2px);
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+  color: #16cfff;
+}
+
+.title {
+  margin: 14px 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f4f8ff;
+}
+
+.desc {
+  margin: 0;
+  color: #9baec0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .whyCard {
+    padding: 24px;
+    border-left: 0;
+    border-top: 1px solid #0b416b;
+  }
+}
+
+@media (max-width: 620px) {
+  .whyCard {
+    padding: 22px 0;
+  }
+}

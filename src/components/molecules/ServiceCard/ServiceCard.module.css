@@ -1,0 +1,57 @@
+.serviceCard {
+  min-height: 110px;
+  display: grid;
+  grid-template-columns: 56px 1fr 38px;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid #0b4a79;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #061b30, #03182b);
+  transition: all 0.25s ease;
+}
+
+.serviceCard:hover {
+  border-color: #19d9ff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(5, 101, 255, 0.2);
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  color: #15c9ff;
+  flex-shrink: 0;
+}
+
+.content h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f4f8ff;
+}
+
+.content p {
+  margin: 0;
+  color: #9db0c1;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.circleArrow {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #0a6599;
+  border-radius: 50%;
+  color: #16cfff;
+  transition: all 0.2s ease;
+}
+
+.serviceCard:hover .circleArrow {
+  background: #16cfff;
+  color: #02101f;
+  border-color: #16cfff;
+  transform: scale(1.05);
+}

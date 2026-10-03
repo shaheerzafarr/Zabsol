@@ -1,0 +1,63 @@
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 12px;
+}
+
+.processIcon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #0d6da7;
+  border-radius: 50%;
+  background: #06213a;
+  color: #1bd3ff;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.card:hover .processIcon {
+  border-color: #1bd3ff;
+  box-shadow: 0 0 16px rgba(27, 211, 255, 0.35);
+  transform: scale(1.05);
+}
+
+.processIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.processIcon span {
+  font-size: 16px;
+}
+
+.title {
+  margin: 2px 0 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f4f8ff;
+}
+
+.desc {
+  margin: 0;
+  color: #93a9bc;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.processArrow {
+  position: absolute;
+  top: 13px;
+  right: -26px;
+  width: 18px;
+  height: 18px;
+  color: #18d0fb;
+}
+
+@media (max-width: 900px) {
+  .processArrow {
+    display: none;
+  }
+}

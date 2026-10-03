@@ -1,0 +1,59 @@
+.architectureGraphic {
+  position: relative;
+  height: 116px;
+  overflow: hidden;
+  border: 1px solid #0b4069;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(145deg, #061c31, #123d65);
+}
+
+.building {
+  position: absolute;
+  bottom: -20px;
+  width: 120px;
+  height: 180px;
+  background:
+    repeating-linear-gradient(90deg, rgba(132, 201, 244, 0.18) 0 2px, transparent 2px 15px),
+    repeating-linear-gradient(0deg, rgba(132, 201, 244, 0.12) 0 2px, transparent 2px 18px),
+    linear-gradient(180deg, #0a2a49, #06111d);
+  border-left: 1px solid rgba(94, 178, 230, 0.35);
+  transform: skewX(-12deg);
+  transition: transform 0.3s ease;
+}
+
+.b1 {
+  left: 2%;
+  height: 190px;
+}
+
+.b2 {
+  left: 25%;
+  height: 230px;
+  transform: skewX(7deg);
+}
+
+.b3 {
+  left: 53%;
+  height: 180px;
+  transform: skewX(-6deg);
+}
+
+.b4 {
+  right: 2%;
+  height: 220px;
+  transform: skewX(12deg);
+}
+
+.archGlow {
+  position: absolute;
+  inset: auto 0 0;
+  height: 70px;
+  background: linear-gradient(transparent, rgba(0, 126, 255, 0.25));
+  pointer-events: none;
+}
+
+@media (max-width: 620px) {
+  .architectureGraphic {
+    height: 100px;
+  }
+}

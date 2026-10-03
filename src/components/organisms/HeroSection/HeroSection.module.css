@@ -1,0 +1,309 @@
+.hero {
+  position: relative;
+  min-height: 700px;
+  overflow: hidden;
+  padding: 154px 0 70px;
+  background:
+    radial-gradient(circle at 78% 26%, rgba(0, 139, 255, 0.2), transparent 28%),
+    radial-gradient(circle at 92% 4%, rgba(0, 94, 255, 0.14), transparent 22%),
+    linear-gradient(180deg, #031427 0%, #02101f 100%);
+  border-bottom: 1px solid #0a3d65;
+}
+
+.shell {
+  width: min(calc(100% - 80px), 1440px);
+  margin: 0 auto;
+}
+
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.13;
+  background-image:
+    linear-gradient(rgba(55, 146, 205, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(55, 146, 205, 0.1) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to right, transparent, black 50%, black 100%);
+  pointer-events: none;
+}
+
+.heroLayout {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.heroKicker {
+  color: #2edcff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 18px 0;
+  font-size: clamp(58px, 5.5vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 750;
+  color: #ffffff;
+}
+
+.hero h1 span {
+  color: #21cfff;
+}
+
+.heroCopy > p {
+  max-width: 680px;
+  margin: 0;
+  color: #ecf4fb;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 18px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btnPrimary {
+  color: #00192d;
+  background: linear-gradient(135deg, #27ddff, #078cff);
+  box-shadow: 0 11px 35px rgba(3, 153, 255, 0.3);
+  border: none;
+}
+
+.btnPrimary:hover {
+  box-shadow: 0 14px 44px rgba(3, 153, 255, 0.45);
+}
+
+.btnGhost {
+  color: #f4f9ff;
+  border: 1px solid #247db6;
+  background: rgba(5, 32, 57, 0.52);
+}
+
+.btnGhost:hover {
+  background: rgba(5, 32, 57, 0.85);
+  border-color: #29dcff;
+}
+
+.play {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #02101f;
+  background: #159fff;
+  font-size: 10px;
+}
+
+.heroPoints {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 720px;
+  margin-top: 50px;
+}
+
+.heroPointItem {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-right: 22px;
+}
+
+.heroPointItem + .heroPointItem {
+  padding-left: 26px;
+  border-left: 1px solid #11639b;
+}
+
+.pointIcon {
+  width: 25px;
+  height: 25px;
+  color: #16cfff;
+  flex-shrink: 0;
+}
+
+.pointText {
+  display: grid;
+  color: #dce8f2;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.pointText strong {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.heroArt {
+  position: relative;
+  min-height: 470px;
+  display: grid;
+  place-items: center;
+}
+
+.heroLogo {
+  position: relative;
+  z-index: 4;
+  width: min(560px, 90%);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 40px 46px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 35px rgba(0, 187, 255, 0.24));
+  transform: rotate(-6deg) scale(1.05);
+  animation: floatArt 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatArt {
+  0% {
+    transform: rotate(-6deg) scale(1.05) translateY(0);
+  }
+  100% {
+    transform: rotate(-5deg) scale(1.06) translateY(-10px);
+  }
+}
+
+.heroHalo {
+  position: absolute;
+  border: 1px solid rgba(16, 166, 255, 0.45);
+  border-radius: 50%;
+  transform: rotate(-17deg);
+  pointer-events: none;
+}
+
+.h1 {
+  width: 580px;
+  height: 290px;
+}
+
+.h2 {
+  width: 700px;
+  height: 350px;
+  opacity: 0.35;
+}
+
+.heroRings {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(circle, transparent 0 28px, rgba(18, 160, 255, 0.08) 29px 30px);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.heroSwoosh {
+  position: absolute;
+  right: -12%;
+  top: 40px;
+  width: 650px;
+  height: 220px;
+  border-top: 1px solid rgba(42, 207, 255, 0.65);
+  border-radius: 50%;
+  transform: rotate(-12deg);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.swooshB {
+  top: 115px;
+  width: 760px;
+  opacity: 0.2;
+}
+
+@media (max-width: 1180px) {
+  .shell {
+    width: min(calc(100% - 48px), 1440px);
+  }
+  .hero h1 {
+    font-size: 62px;
+  }
+  .heroPoints {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .heroPointItem + .heroPointItem {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .heroLayout {
+    grid-template-columns: 1fr;
+  }
+  .heroArt {
+    min-height: 380px;
+  }
+  .hero {
+    padding-top: 130px;
+  }
+}
+
+@media (max-width: 620px) {
+  .shell {
+    width: min(calc(100% - 28px), 1440px);
+  }
+  .hero h1 {
+    font-size: 47px;
+  }
+  .heroCopy > p {
+    font-size: 15px;
+  }
+  .heroButtons {
+    display: grid;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .heroArt {
+    min-height: 310px;
+  }
+  .heroLogo {
+    width: 330px;
+  }
+  .h1 {
+    width: 380px;
+    height: 190px;
+  }
+  .h2 {
+    width: 470px;
+    height: 230px;
+  }
+  .heroRings {
+    width: 360px;
+    height: 360px;
+  }
+  .heroPoints {
+    margin-top: 34px;
+  }
+}

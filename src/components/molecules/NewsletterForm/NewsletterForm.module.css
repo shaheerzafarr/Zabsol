@@ -1,41 +1,7 @@
-.form {
-  display: grid;
-  grid-template-columns: 1fr 38px;
-  border: 1px solid #0b5f94;
-  border-radius: 6px;
-  overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
+.form { display:grid; grid-template-columns:1fr 42px; border:1px solid #1b4a7e; border-radius:6px; overflow:hidden; transition:border-color .2s ease,box-shadow .2s ease; }
+.form:focus-within { border-color:#029bfc; box-shadow:0 0 0 3px rgba(2,155,252,.12); }
+.input { min-width:0; padding:12px 13px; color:#e8f4ff; background:#061b42; border:0; outline:0; font-size:11px; }
+.input::placeholder { color:#5f7d9c; }
+.button { display:grid; place-items:center; border:0; background:#0166ed; color:#fff; cursor:pointer; transition:background .2s ease; }
+.button:hover { background:#029bfc; }
 
-.form:focus-within {
-  border-color: #19cff5;
-  box-shadow: 0 0 12px rgba(25, 207, 245, 0.25);
-}
-
-.input {
-  min-width: 0;
-  padding: 10px 12px;
-  color: #dcefff;
-  background: #061a2d;
-  border: 0;
-  outline: 0;
-  font-size: 11px;
-}
-
-.input::placeholder {
-  color: #5d7890;
-}
-
-.button {
-  display: grid;
-  place-items: center;
-  border: 0;
-  background: #19cff5;
-  color: #002033;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.button:hover {
-  background: #4ae0ff;
-}

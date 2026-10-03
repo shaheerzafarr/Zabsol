@@ -1,309 +1,54 @@
 .hero {
   position: relative;
-  min-height: 700px;
+  min-height: min(100svh, 860px);
   overflow: hidden;
-  padding: 154px 0 70px;
-  background:
-    radial-gradient(circle at 78% 26%, rgba(0, 139, 255, 0.2), transparent 28%),
-    radial-gradient(circle at 92% 4%, rgba(0, 94, 255, 0.14), transparent 22%),
-    linear-gradient(180deg, #031427 0%, #02101f 100%);
-  border-bottom: 1px solid #0a3d65;
+  padding: clamp(120px, 15vh, 160px) 0 clamp(64px, 9vh, 100px);
+  background: radial-gradient(circle at 82% 18%, rgba(2, 155, 252, 0.28), transparent 27%), linear-gradient(125deg, #00113f 0%, #00276f 58%, #0035a3 100%);
+  color: #fff;
 }
-
-.shell {
-  width: min(calc(100% - 80px), 1440px);
-  margin: 0 auto;
-}
-
-.heroGrid {
-  position: absolute;
-  inset: 0;
-  opacity: 0.13;
-  background-image:
-    linear-gradient(rgba(55, 146, 205, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(55, 146, 205, 0.1) 1px, transparent 1px);
-  background-size: 52px 52px;
-  mask-image: linear-gradient(to right, transparent, black 50%, black 100%);
-  pointer-events: none;
-}
-
-.heroLayout {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  align-items: center;
-  gap: 40px;
-}
-
-.heroKicker {
-  color: #2edcff;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  margin: 18px 0;
-  font-size: clamp(58px, 5.5vw, 88px);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
-  font-weight: 750;
-  color: #ffffff;
-}
-
-.hero h1 span {
-  color: #21cfff;
-}
-
-.heroCopy > p {
-  max-width: 680px;
-  margin: 0;
-  color: #ecf4fb;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.heroButtons {
-  display: flex;
-  gap: 18px;
-  margin-top: 28px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  min-height: 54px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 11px;
-  padding: 0 24px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btnPrimary {
-  color: #00192d;
-  background: linear-gradient(135deg, #27ddff, #078cff);
-  box-shadow: 0 11px 35px rgba(3, 153, 255, 0.3);
-  border: none;
-}
-
-.btnPrimary:hover {
-  box-shadow: 0 14px 44px rgba(3, 153, 255, 0.45);
-}
-
-.btnGhost {
-  color: #f4f9ff;
-  border: 1px solid #247db6;
-  background: rgba(5, 32, 57, 0.52);
-}
-
-.btnGhost:hover {
-  background: rgba(5, 32, 57, 0.85);
-  border-color: #29dcff;
-}
-
-.play {
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: #02101f;
-  background: #159fff;
-  font-size: 10px;
-}
-
-.heroPoints {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 720px;
-  margin-top: 50px;
-}
-
-.heroPointItem {
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  padding-right: 22px;
-}
-
-.heroPointItem + .heroPointItem {
-  padding-left: 26px;
-  border-left: 1px solid #11639b;
-}
-
-.pointIcon {
-  width: 25px;
-  height: 25px;
-  color: #16cfff;
-  flex-shrink: 0;
-}
-
-.pointText {
-  display: grid;
-  color: #dce8f2;
-  font-size: 11px;
-  line-height: 1.45;
-}
-
-.pointText strong {
-  color: #ffffff;
-  font-size: 11px;
-}
-
-.heroArt {
-  position: relative;
-  min-height: 470px;
-  display: grid;
-  place-items: center;
-}
-
-.heroLogo {
-  position: relative;
-  z-index: 4;
-  width: min(560px, 90%);
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 40px 46px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 35px rgba(0, 187, 255, 0.24));
-  transform: rotate(-6deg) scale(1.05);
-  animation: floatArt 6s ease-in-out infinite alternate;
-}
-
-@keyframes floatArt {
-  0% {
-    transform: rotate(-6deg) scale(1.05) translateY(0);
-  }
-  100% {
-    transform: rotate(-5deg) scale(1.06) translateY(-10px);
-  }
-}
-
-.heroHalo {
-  position: absolute;
-  border: 1px solid rgba(16, 166, 255, 0.45);
-  border-radius: 50%;
-  transform: rotate(-17deg);
-  pointer-events: none;
-}
-
-.h1 {
-  width: 580px;
-  height: 290px;
-}
-
-.h2 {
-  width: 700px;
-  height: 350px;
-  opacity: 0.35;
-}
-
-.heroRings {
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  border-radius: 50%;
-  background:
-    repeating-radial-gradient(circle, transparent 0 28px, rgba(18, 160, 255, 0.08) 29px 30px);
-  opacity: 0.75;
-  pointer-events: none;
-}
-
-.heroSwoosh {
-  position: absolute;
-  right: -12%;
-  top: 40px;
-  width: 650px;
-  height: 220px;
-  border-top: 1px solid rgba(42, 207, 255, 0.65);
-  border-radius: 50%;
-  transform: rotate(-12deg);
-  opacity: 0.45;
-  pointer-events: none;
-}
-
-.swooshB {
-  top: 115px;
-  width: 760px;
-  opacity: 0.2;
-}
-
-@media (max-width: 1180px) {
-  .shell {
-    width: min(calc(100% - 48px), 1440px);
-  }
-  .hero h1 {
-    font-size: 62px;
-  }
-  .heroPoints {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .heroPointItem + .heroPointItem {
-    padding-left: 0;
-    border-left: 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .heroLayout {
-    grid-template-columns: 1fr;
-  }
-  .heroArt {
-    min-height: 380px;
-  }
-  .hero {
-    padding-top: 130px;
-  }
-}
-
-@media (max-width: 620px) {
-  .shell {
-    width: min(calc(100% - 28px), 1440px);
-  }
-  .hero h1 {
-    font-size: 47px;
-  }
-  .heroCopy > p {
-    font-size: 15px;
-  }
-  .heroButtons {
-    display: grid;
-    width: 100%;
-  }
-  .btn {
-    width: 100%;
-  }
-  .heroArt {
-    min-height: 310px;
-  }
-  .heroLogo {
-    width: 330px;
-  }
-  .h1 {
-    width: 380px;
-    height: 190px;
-  }
-  .h2 {
-    width: 470px;
-    height: 230px;
-  }
-  .heroRings {
-    width: 360px;
-    height: 360px;
-  }
-  .heroPoints {
-    margin-top: 34px;
-  }
-}
+.hero::after { content: ""; position: absolute; inset: auto -8% -180px 36%; height: 360px; border-radius: 50%; background: #029bfc; filter: blur(150px); opacity: .18; pointer-events: none; }
+.shell { width: min(calc(100% - 96px), 1320px); margin: 0 auto; }
+.heroGrid { position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.065) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.065) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(90deg, transparent 0%, #000 56%, #000 100%); pointer-events: none; }
+.heroLayout { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); align-items: center; gap: clamp(28px,3vw,52px); }
+.heroCopy { min-width: 0; max-width: 700px; }
+.hero h1 { margin: 0 0 28px; font-size: clamp(46px,5vw,76px); line-height: 1.02; letter-spacing: -.055em; font-weight: 720; }
+.hero h1 span { color: #29c2ff; }
+.heroCopy > p { max-width: 640px; margin: 0; color: #c9daf1; font-size: 19px; line-height: 1.7; }
+.heroButtons { display: flex; gap: 16px; margin-top: 38px; flex-wrap: wrap; }
+.btn { min-height: 58px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 0 30px; border-radius: 999px; font-size: 14px; font-weight: 750; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btnPrimary { color: #fff; background: #0166ed; box-shadow: 0 16px 34px rgba(1,102,237,.3); }
+.btnPrimary:hover { background: #0876ff; box-shadow: 0 18px 40px rgba(1,102,237,.4); }
+.btnGhost { color: #fff; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.045); }
+.btnGhost:hover { background: rgba(255,255,255,.1); }
+.heroPoints { display: grid; grid-template-columns: repeat(3,1fr); margin-top: 62px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,.15); }
+.heroPointItem { min-height: 54px; display: flex; align-items: center; gap: 14px; padding-right: 20px; }
+.heroPointItem + .heroPointItem { padding-left: 24px; border-left: 1px solid rgba(71,188,255,.3); }
+.pointIcon { width: 26px; height: 26px; color: #42c8ff; flex-shrink: 0; }
+.pointText { display: grid; color: #9db9d9; font-size: 11px; line-height: 1.55; }
+.pointText strong { color: #fff; font-size: 13px; }
+.heroArt { position:relative; width:100%; aspect-ratio:1; max-height:620px; align-self:center; display:grid; place-items:center; isolation:isolate; }
+.heroArt::before,.heroArt::after { content:""; position:absolute; z-index:0; border-radius:50%; pointer-events:none; }
+.heroArt::before { left:-17%; top:17%; width:142%; height:63%; border-top:18px solid rgba(2,155,252,.075); transform:rotate(-18deg); filter:drop-shadow(0 0 18px rgba(2,155,252,.2)); }
+.heroArt::after { left:5%; top:45%; width:108%; height:42%; border-bottom:12px solid rgba(1,102,237,.11); transform:rotate(13deg); }
+.visualGlow { position: absolute; width: 560px; height: 470px; border-radius: 50%; background: radial-gradient(circle,#029bfc 0%,#0166ed 46%,transparent 72%); opacity: .38; filter: blur(92px); }
+.heroLogo { position: relative; z-index: 3; width:100%; height:auto; max-height:100%; object-fit: contain; filter: drop-shadow(0 35px 48px rgba(0,4,30,.62)) drop-shadow(0 0 32px rgba(2,155,252,.3)); transform: rotate(-7deg); animation: markFloat 7s ease-in-out infinite alternate; }
+.orbit { position: absolute; z-index: 1; left: 1%; top: 47%; width: 112%; height: 35%; border: 1px solid rgba(48,185,255,.7); border-radius: 50%; transform: rotate(-16deg); box-shadow: 0 0 16px rgba(2,155,252,.16); }
+.orbitTwo { left:-4%; top:39%; width:122%; height:47%; border-color:rgba(1,102,237,.42); transform:rotate(-9deg); }
+.orbitThree { left:18%; top:20%; width:94%; height:64%; border-color:rgba(2,155,252,.22); transform:rotate(17deg); }
+.orbitFour { left:-2%; top:31%; width:116%; height:58%; border-color:rgba(75,205,255,.25); transform:rotate(-25deg); }
+.orbitFive { left:13%; top:11%; width:96%; height:78%; border-color:rgba(1,102,237,.26); transform:rotate(29deg); }
+.waveRibbon { position:absolute; z-index:2; pointer-events:none; border-radius:50%; transform-origin:center; }
+.waveRibbon::before,.waveRibbon::after { content:""; position:absolute; inset:0; border-radius:inherit; }
+.waveOne { left:-18%; top:19%; width:142%; height:58%; transform:rotate(-17deg); border-top:10px solid rgba(2,155,252,.18); filter:drop-shadow(0 0 12px rgba(2,155,252,.3)); }
+.waveOne::before { inset:18px 30px -18px; border-top:4px solid rgba(83,216,255,.28); }
+.waveOne::after { inset:34px 58px -34px; border-top:2px solid rgba(1,102,237,.38); }
+.waveTwo { left:-9%; top:43%; width:130%; height:45%; transform:rotate(10deg); border-bottom:7px solid rgba(1,102,237,.2); }
+.waveTwo::before { inset:-22px 44px 22px; border-bottom:3px solid rgba(54,196,255,.28); }
+.waveTwo::after { inset:-42px 78px 42px; border-bottom:1px solid rgba(96,219,255,.42); }
+.waveThree { z-index:4; left:17%; top:57%; width:86%; height:25%; transform:rotate(-12deg); border-top:2px solid rgba(117,226,255,.32); opacity:.72; }
+.lightFan { position:absolute; z-index:0; right:-22%; bottom:4%; width:86%; height:52%; opacity:.48; transform:skewX(-20deg) rotate(-8deg); background:repeating-linear-gradient(172deg,rgba(56,197,255,.32) 0 1px,transparent 1px 9px); mask-image:linear-gradient(90deg,transparent,#000); }
+@keyframes markFloat { from { transform:rotate(-7deg) translateY(3px); } to { transform:rotate(-6deg) translateY(-9px); } }
+@media (max-width:1180px) { .shell { width: min(calc(100% - 56px),1320px); } .heroPoints { grid-template-columns: 1fr; gap: 14px; margin-top:46px; } .heroPointItem + .heroPointItem { padding-left:0; border-left:0; } }
+@media (max-width:900px) { .hero { min-height:0; padding:118px 0 72px; } .heroLayout { grid-template-columns:1fr; gap:24px; } .heroCopy { max-width:700px; } .hero h1 { font-size:clamp(52px,7vw,66px); } .heroArt { width:min(100%,600px); margin:0 auto; } .heroLogo { max-width:100%; } }
+@media (max-width:620px) { .shell { width: min(calc(100% - 36px),1320px); } .hero { padding: 106px 0 54px; } .hero h1 { font-size: clamp(39px,11vw,50px); } .heroCopy > p { font-size: 16px; } .heroButtons { display: grid; } .btn { width: 100%; } .heroPoints { margin-top:36px; } .heroArt { width:100%; } .orbit { left:-8%; width:116%; } .orbitTwo { left:-14%; width:128%; } .lightFan { right:-15%; width:90%; } }

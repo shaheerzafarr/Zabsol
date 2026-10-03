@@ -10,7 +10,7 @@ export default function WhySection({ className = "" }) {
     <section className={cn(classes.why, className)}>
       <div className={cn(classes.shell, classes.whyGrid)}>
         <div className={classes.whyTitle}>
-          <SectionKicker>WHY ZABSOL</SectionKicker>
+          <SectionKicker className={classes.kicker}>WHY ZABSOL</SectionKicker>
           <h2>A partner built for what&apos;s next.</h2>
         </div>
 

@@ -1,5 +1,50 @@
-.badge { min-width:0; min-height:76px; display:inline-flex; align-items:center; justify-content:flex-start; gap:14px; padding:14px 18px; border:1px solid #d3e3f2; border-radius:7px; color:#28445f; font-size:13px; font-weight:700; background:#fff; box-shadow:0 7px 18px rgba(0,38,85,.04); transition:all .2s ease; }
-.badge:hover { border-color:#79c2f3; color:#0035a3; transform:translateY(-3px); box-shadow:0 14px 28px rgba(0,53,163,.09); }
-.avatar { width:36px; height:36px; display:grid; place-items:center; border-radius:6px; font-style:normal; font-weight:800; font-size:13px; background:#eaf5ff; color:#0035a3; border:1px solid #c7e3f8; }
-.accent .avatar { color:#fff; border-color:#0166ed; background:#0166ed; }
-
+.badge {
+  position: relative;
+  min-width: 0;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 26px;
+  border: 1px solid rgba(170, 218, 255, .22);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.045));
+  box-shadow: 0 16px 34px rgba(0, 8, 42, .12);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.badge::after {
+  content: "";
+  position: absolute;
+  right: -58px;
+  bottom: -88px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(49, 191, 255, .16);
+  filter: blur(42px);
+  pointer-events: none;
+}
+.badge:hover {
+  transform: translateY(-6px);
+  border-color: rgba(120, 216, 255, .68);
+  background: linear-gradient(145deg, rgba(255,255,255,.17), rgba(255,255,255,.07));
+  box-shadow: 0 24px 48px rgba(0, 8, 42, .22);
+}
+.cardTop { position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.iconFrame { width: 66px; height: 66px; display: grid; place-items: center; flex: none; border: 1px solid rgba(255,255,255,.7); border-radius: 15px; background: #fff; box-shadow: 0 12px 28px rgba(0, 9, 51, .2); }
+.icon { width: 42px; height: 42px; object-fit: contain; }
+.category { max-width: 100px; padding-top: 4px; color: #95d5ff; font-size: 10px; font-weight: 800; letter-spacing: .13em; line-height: 1.45; text-align: right; text-transform: uppercase; }
+.cardCopy { position: relative; z-index: 1; padding-top: 25px; }
+.cardCopy h3 { margin: 0 0 8px; color: #fff; font-size: 21px; font-weight: 750; letter-spacing: -.025em; }
+.cardCopy p { max-width: 220px; margin: 0; color: #b9d5ed; font-size: 12px; line-height: 1.6; }
+@media (max-width: 620px) {
+  .badge { min-height: 220px; padding: 20px; border-radius: 15px; }
+  .cardTop { flex-direction: column; gap: 11px; }
+  .iconFrame { width: 56px; height: 56px; border-radius: 12px; }
+  .icon { width: 36px; height: 36px; }
+  .category { max-width: none; padding: 0; font-size: 8px; text-align: left; }
+  .cardCopy h3 { font-size: 18px; }
+  .cardCopy p { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .badge { transition: none; } }

@@ -1,15 +1,17 @@
-.futureBanner { position:relative; overflow:hidden; padding:100px 0; background:#00113f; }
-.futureBanner::after { content:""; position:absolute; width:500px; height:500px; right:-180px; bottom:-300px; border-radius:50%; background:#0166ed; filter:blur(80px); opacity:.24; }
-.shell { width:min(calc(100% - 96px),1320px); margin:0 auto; }
-.futureInner { position:relative; z-index:1; display:grid; grid-template-columns:.85fr 1.4fr 1fr .9fr; align-items:center; gap:48px; }
-.futureTitle h2 { margin:0; font-size:clamp(38px,3.4vw,50px); line-height:1.05; letter-spacing:-.045em; color:#fff; font-weight:720; }
-.futureCopy p { margin:0 0 22px; color:#a9c2df; font-size:14px; line-height:1.7; }
-.outlineBtn { min-height:43px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:0 17px; border:1px solid rgba(108,193,255,.5); border-radius:6px; color:#67ceff; font-size:11px; font-weight:750; transition:all .2s ease; }
-.outlineBtn:hover { background:rgba(2,155,252,.12); border-color:#029bfc; transform:translateY(-2px); }
-.valuesList { margin:0; padding:0; list-style:none; display:grid; gap:18px; }
-.valueItem { display:flex; align-items:center; gap:12px; color:#c7d9ec; font-size:12px; }
-.valueIcon { width:18px; height:18px; color:#29bfff; flex-shrink:0; }
-@media(max-width:1180px){.shell{width:min(calc(100% - 56px),1320px)}.futureInner{grid-template-columns:1fr 1.2fr 1fr}.valuesList{display:none}}
-@media(max-width:900px){.futureInner{grid-template-columns:1fr 1fr}.futureCopy{grid-column:1/-1;max-width:620px}}
-@media(max-width:620px){.futureBanner{padding:78px 0}.shell{width:min(calc(100% - 36px),1320px)}.futureInner{grid-template-columns:1fr}.futureCopy{grid-column:auto}.outlineBtn{width:100%}}
-
+.futureBanner { padding: clamp(88px, 8vw, 120px) 0; overflow: hidden; background: #00113f; color: #fff; }
+.shell { width: min(calc(100% - 96px), 1320px); margin: 0 auto; }
+.futureInner { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 24px 74px; align-items: start; }
+.futureTitle h2 { max-width: 520px; margin: 0; font-size: clamp(40px, 3.8vw, 56px); line-height: 1.08; letter-spacing: -.05em; font-weight: 720; }
+.futureCopy { grid-column: 1; }
+.futureCopy p { max-width: 510px; margin: 0 0 26px; color: #b7cce2; font-size: 15px; line-height: 1.75; }
+.outlineBtn { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 20px; border: 1px solid rgba(108,193,255,.55); border-radius: 8px; color: #8bdbff; font-size: 12px; font-weight: 750; transition: background .2s ease, transform .2s ease; }
+.outlineBtn:hover { background: rgba(2,155,252,.12); transform: translateY(-2px); }
+.valuesList { grid-column: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; margin: 18px 0 0; padding: 0; list-style: none; }
+.valueItem { display: flex; align-items: center; gap: 11px; color: #d2e2f2; font-size: 12px; }
+.valueIcon { width: 19px; height: 19px; flex: none; color: #49caff; }
+.futureVisual { position: relative; grid-column: 2; grid-row: 1 / 4; align-self: stretch; min-height: 420px; overflow: hidden; border: 1px solid rgba(114,188,241,.22); border-radius: 18px; background: #00276f; box-shadow: 0 30px 70px rgba(0,0,0,.23); }
+.futureVisual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,17,63,.15), transparent 55%, rgba(0,17,63,.28)); pointer-events: none; }
+.futureImage { object-fit: cover; object-position: 62% center; }
+@media (max-width: 1180px) { .shell { width: min(calc(100% - 56px), 1320px); } .futureInner { gap: 22px 44px; } }
+@media (max-width: 900px) { .futureInner { grid-template-columns: 1fr; } .futureTitle, .futureCopy, .valuesList, .futureVisual { grid-column: 1; } .futureVisual { grid-row: auto; min-height: 360px; margin-top: 14px; } }
+@media (max-width: 620px) { .futureBanner { padding: 80px 0; } .shell { width: min(calc(100% - 36px), 1320px); } .futureTitle h2 { font-size: 39px; } .valuesList { grid-template-columns: 1fr; gap: 14px; } .futureVisual { min-height: 270px; } .outlineBtn { width: 100%; } }

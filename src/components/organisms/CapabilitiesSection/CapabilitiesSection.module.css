@@ -1,10 +1,26 @@
-.capabilities { padding:96px 0 102px; background:#f3f8fe; border-top:1px solid #dce9f6; }
-.shell { width:min(calc(100% - 96px),1320px); margin:0 auto; }
-.capsTop { display:flex; justify-content:space-between; gap:64px; align-items:flex-end; }
-.capsTop h2 { max-width:760px; margin:0; font-size:clamp(38px,3.5vw,52px); line-height:1.08; letter-spacing:-.045em; color:#00113f; font-weight:720; }
-.outlineBtn { min-height:45px; display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:0 18px; border:1px solid #b7cbe0; border-radius:6px; color:#0035a3; background:#fff; font-size:12px; font-weight:750; white-space:nowrap; transition:all .2s ease; }
-.outlineBtn:hover { border-color:#0166ed; transform:translateY(-2px); }
-.techRow { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:48px; }
-@media(max-width:1180px){.shell{width:min(calc(100% - 56px),1320px)}}
-@media(max-width:900px){.capsTop{align-items:flex-start;flex-direction:column;gap:22px}.techRow{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.capabilities{padding:78px 0}.shell{width:min(calc(100% - 36px),1320px)}.outlineBtn{width:100%}.techRow{grid-template-columns:1fr}}
+.capabilities {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(96px, 9vw, 142px) 0 92px;
+  background: radial-gradient(circle at 78% 7%, rgba(1, 132, 255, .38), transparent 33%), linear-gradient(125deg, #00113f 0%, #002e80 58%, #0050bd 100%);
+  color: #fff;
+}
+.capabilities::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .22;
+  background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(90deg, transparent, #000 40%, #000);
+  pointer-events: none;
+}
+.shell { position: relative; width: min(calc(100% - 96px), 1320px); margin: 0 auto; }
+.kicker { color: #a7e5ff; }
+.capsTop h2 { max-width: 800px; margin: 0; color: #fff; font-size: clamp(48px, 5vw, 72px); font-weight: 740; letter-spacing: -.055em; line-height: 1.04; }
+.capsTop h2 span { color: #53ccff; }
+.techRow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 64px; }
+@media (max-width: 1180px) { .shell { width: min(calc(100% - 56px), 1320px); } .capsTop h2 { font-size: clamp(44px, 5vw, 60px); } }
+@media (max-width: 900px) { .techRow { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 44px; } }
+@media (max-width: 620px) { .capabilities { padding: 80px 0 68px; } .shell { width: min(calc(100% - 36px), 1320px); } .capsTop h2 { font-size: clamp(42px, 11vw, 54px); } .techRow { gap: 10px; margin-top: 36px; } }
+@media (max-width: 380px) { .techRow { grid-template-columns: 1fr; } }

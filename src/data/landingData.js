@@ -166,14 +166,14 @@ export const PROCESS_STEPS = [
 ];
 
 export const TECHNOLOGIES_LIST = [
-  { name: "Next.js", accent: false },
-  { name: "React", accent: true },
-  { name: "Python", accent: false },
-  { name: "Node.js", accent: true },
-  { name: "PostgreSQL", accent: false },
-  { name: "MongoDB", accent: false },
-  { name: "AWS", accent: true },
-  { name: "Azure", accent: false },
+  { name: "Next.js", category: "Web platforms", description: "Fast, resilient digital products", icon: "/tech-icons/nextjs.svg" },
+  { name: "React", category: "Interfaces", description: "Fluid experiences people enjoy", icon: "/tech-icons/react.svg" },
+  { name: "Python", category: "AI & automation", description: "Intelligence in every workflow", icon: "/tech-icons/python.svg" },
+  { name: "Node.js", category: "Backend", description: "Reliable services built to scale", icon: "/tech-icons/nodejs.svg" },
+  { name: "PostgreSQL", category: "Data systems", description: "Trusted transactional foundations", icon: "/tech-icons/postgresql.svg" },
+  { name: "MongoDB", category: "Data systems", description: "Flexible document platforms", icon: "/tech-icons/mongodb.svg" },
+  { name: "AWS", category: "Cloud infrastructure", description: "Infrastructure ready to grow", icon: "/tech-icons/aws.svg" },
+  { name: "Azure", category: "Cloud infrastructure", description: "Enterprise cloud delivery", icon: "/tech-icons/azure.svg" },
 ];
 
 export const FUTURE_VALUES = [
@@ -181,12 +181,6 @@ export const FUTURE_VALUES = [
   { icon: Settings2, text: "Agile and transparent delivery" },
   { icon: Users, text: "Client-centric mindset" },
   { icon: Zap, text: "Built for long-term impact" },
-];
-
-export const GLOBAL_ADVANTAGES = [
-  "Flexible time zone alignment",
-  "Clear and consistent communication",
-  "Trusted working model",
 ];
 
 export const GLOBAL_REGIONS = [

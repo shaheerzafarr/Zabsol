@@ -1,10 +1,8 @@
-.serviceStrip { border-bottom: 1px solid #dce8f5; background: #fff; }
-.shell { width: min(calc(100% - 96px),1320px); margin: 0 auto; }
-.serviceStripInner { min-height: 106px; display: grid; grid-template-columns: repeat(6,1fr); }
-.stripItem { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 0 16px; color: #28445f; font-size: 11px; font-weight: 750; transition: color .2s ease, background .2s ease; }
-.stripItem:hover { color: #0166ed; background: #f7fbff; }
+.serviceStrip { border-bottom: 1px solid #e2ecf6; background: #fff; }
+.shell { width: min(calc(100% - 96px), 1320px); margin: 0 auto; }
+.serviceStripInner { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); padding: 20px 0; }
+.stripItem { min-height: 72px; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 14px; color: #28445f; font-size: 11px; font-weight: 750; line-height: 1.4; }
 .stripItem + .stripItem { border-left: 1px solid #e4edf7; }
-.stripIcon { width: 21px; height: 21px; color: #0166ed; flex-shrink: 0; }
-@media(max-width:1180px){.shell{width:min(calc(100% - 56px),1320px)}.serviceStripInner{grid-template-columns:repeat(3,1fr)}.stripItem{min-height:74px}.stripItem:nth-child(4){border-left:0}.stripItem:nth-child(n+4){border-top:1px solid #e4edf7}}
-@media(max-width:620px){.shell{width:min(calc(100% - 36px),1320px)}.serviceStripInner{grid-template-columns:1fr 1fr}.stripItem{justify-content:flex-start;padding-left:14px}.stripItem:nth-child(4){border-left:1px solid #e4edf7}.stripItem:nth-child(odd){border-left:0}.stripItem:nth-child(n+3){border-top:1px solid #e4edf7}}
-
+.stripIcon { width: 22px; height: 22px; flex: none; color: #0166ed; }
+@media (max-width: 1180px) { .shell { width: min(calc(100% - 56px), 1320px); } .serviceStripInner { grid-template-columns: repeat(3, 1fr); } .stripItem:nth-child(4) { border-left: 0; } .stripItem:nth-child(n+4) { border-top: 1px solid #e4edf7; } }
+@media (max-width: 620px) { .shell { width: min(calc(100% - 36px), 1320px); } .serviceStripInner { grid-template-columns: repeat(2, 1fr); padding: 12px 0; } .stripItem { justify-content: flex-start; padding-left: 10px; } .stripItem:nth-child(4) { border-left: 1px solid #e4edf7; } .stripItem:nth-child(odd) { border-left: 0; } .stripItem:nth-child(n+3) { border-top: 1px solid #e4edf7; } }

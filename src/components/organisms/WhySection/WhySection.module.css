@@ -1,10 +1,10 @@
-.why { position: relative; overflow: hidden; padding: 106px 0; background: linear-gradient(120deg,#0035a3,#0166ed); color:#fff; }
-.why::after { content:""; position:absolute; width:520px; height:520px; right:-180px; top:-230px; border:1px solid rgba(255,255,255,.2); border-radius:50%; box-shadow:0 0 0 75px rgba(255,255,255,.035),0 0 0 150px rgba(255,255,255,.025); }
-.shell { width: min(calc(100% - 96px),1320px); margin: 0 auto; }
-.whyGrid { position:relative; z-index:1; display:grid; grid-template-columns:1.08fr repeat(3,1fr); align-items:stretch; }
-.whyTitle { padding-right:54px; }
-.whyTitle h2 { margin:0; max-width:320px; font-size:clamp(38px,3.3vw,48px); line-height:1.05; color:#fff; font-weight:720; letter-spacing:-.045em; }
-.kicker { color:#bfeaff; }
-@media(max-width:1180px){.shell{width:min(calc(100% - 56px),1320px)}}
-@media(max-width:900px){.whyGrid{grid-template-columns:1fr 1fr}.whyTitle{padding-bottom:44px;grid-column:1/-1}}
-@media(max-width:620px){.why{padding:78px 0}.shell{width:min(calc(100% - 36px),1320px)}.whyGrid{grid-template-columns:1fr}.whyTitle{padding-right:0}}
+.why { position: relative; overflow: hidden; padding: clamp(88px, 8vw, 118px) 0; background: linear-gradient(125deg, #001b55, #0035a3 65%, #0166ed); color: #fff; }
+.why::after { content: ""; position: absolute; width: 590px; height: 590px; right: -190px; top: -270px; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; box-shadow: 0 0 0 75px rgba(255,255,255,.025), 0 0 0 150px rgba(255,255,255,.02); }
+.shell { width: min(calc(100% - 96px), 1320px); margin: 0 auto; }
+.whyGrid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.whyTitle { grid-column: 1 / -1; padding-bottom: 30px; }
+.whyTitle h2 { max-width: 620px; margin: 0; color: #fff; font-size: clamp(40px, 3.8vw, 56px); font-weight: 720; letter-spacing: -.05em; line-height: 1.08; }
+.kicker { color: #a6e2ff; }
+@media (max-width: 1180px) { .shell { width: min(calc(100% - 56px), 1320px); } }
+@media (max-width: 900px) { .whyGrid { grid-template-columns: 1fr 1fr; } .whyTitle { display: block; } }
+@media (max-width: 620px) { .why { padding: 80px 0; } .shell { width: min(calc(100% - 36px), 1320px); } .whyGrid { grid-template-columns: 1fr; gap: 12px; } .whyTitle { padding-bottom: 16px; } .whyTitle h2 { font-size: 39px; } }

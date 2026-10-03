@@ -1,7 +1,7 @@
-.aboutCard { min-height:230px; padding:28px 24px; border:1px solid #dce8f4; border-radius:8px; background:#fff; box-shadow:0 14px 36px rgba(0,35,81,.07); transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease; display:flex; flex-direction:column; }
-.aboutCard:hover { border-color:#8cc9f5; transform:translateY(-5px); box-shadow:0 20px 42px rgba(0,53,163,.12); }
-.icon { width:34px; height:34px; color:#0166ed; }
-.title { margin:24px 0 10px; font-size:17px; font-weight:750; color:#00113f; }
-.desc { margin:0; color:#61768a; font-size:13px; line-height:1.65; flex:1; }
-.bar { display:block; width:30px; height:3px; margin-top:20px; background:#029bfc; }
-
+.aboutCard { min-height: 205px; display: flex; flex-direction: column; padding: 28px; border: 1px solid #dce8f4; border-radius: 13px; background: #f9fcff; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.aboutCard:hover { transform: translateY(-4px); border-color: #a2d2f5; box-shadow: 0 18px 38px rgba(0,53,163,.08); }
+.icon { width: 30px; height: 30px; color: #0166ed; }
+.title { margin: 24px 0 9px; color: #00113f; font-size: 17px; font-weight: 750; }
+.desc { max-width: 340px; margin: 0; color: #60768b; font-size: 13px; line-height: 1.65; flex: 1; }
+.bar { display: block; width: 30px; height: 2px; margin-top: 20px; background: #029bfc; }
+@media (max-width: 620px) { .aboutCard { min-height: 0; } }

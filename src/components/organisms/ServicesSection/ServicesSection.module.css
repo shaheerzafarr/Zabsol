@@ -1,13 +1,7 @@
-.services { padding: 124px 0 132px; background: #f3f8fe; border-top: 1px solid #dce9f6; }
-.shell { width: min(calc(100% - 96px),1320px); margin: 0 auto; }
-.sectionRow { display: grid; grid-template-columns: 1.15fr .85fr; gap: 90px; align-items: end; }
-.sectionRow h2 { max-width: 720px; margin: 0; font-size: clamp(40px,3.8vw,56px); line-height: 1.08; letter-spacing: -.048em; color: #00113f; font-weight: 720; }
-.sectionSide { display: grid; gap: 25px; justify-items: start; padding-bottom: 4px; }
-.sectionSide p { margin: 0; color: #60768b; font-size: 15px; line-height: 1.7; }
-.btn { min-height: 47px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 19px; border: 1px solid #b9cde2; border-radius: 6px; font-size: 12px; font-weight: 750; color: #0035a3; background: #fff; transition: transform .2s ease,border-color .2s ease; }
-.btn:hover { transform: translateY(-2px); border-color: #0166ed; }
-.servicesGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 58px; }
-@media(max-width:1180px){.shell{width:min(calc(100% - 56px),1320px)}.sectionRow{gap:50px}}
-@media(max-width:900px){.sectionRow{grid-template-columns:1fr;gap:24px}.servicesGrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.services{padding:84px 0}.shell{width:min(calc(100% - 36px),1320px)}.servicesGrid{grid-template-columns:1fr;margin-top:42px}.btn{width:100%}}
-
+.services { padding: clamp(88px, 9vw, 132px) 0; background: #f4f8fd; border-top: 1px solid #e4edf7; }
+.shell { width: min(calc(100% - 96px), 1320px); margin: 0 auto; }
+.sectionRow h2 { max-width: 900px; margin: 0; color: #00113f; font-size: clamp(40px, 3.8vw, 56px); font-weight: 720; letter-spacing: -.05em; line-height: 1.08; }
+.servicesGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 54px; }
+@media (max-width: 1180px) { .shell { width: min(calc(100% - 56px), 1320px); } }
+@media (max-width: 900px) { .servicesGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .services { padding: 82px 0; } .shell { width: min(calc(100% - 36px), 1320px); } .sectionRow h2 { font-size: 39px; } .servicesGrid { grid-template-columns: 1fr; margin-top: 38px; } }

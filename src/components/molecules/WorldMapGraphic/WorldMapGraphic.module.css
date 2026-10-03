@@ -1,7 +1,16 @@
-.mapWrap { position:relative; height:360px; width:100%; padding:20px; border:1px solid #d8e7f4; border-radius:10px; background:#f3f8fe; }
-.worldMap { width:100%; height:100%; opacity:.94; display:block; }
-.mapLabel { position:absolute; padding:7px 10px; border:1px solid #a8d5f3; border-radius:5px; background:#fff; color:#0035a3; font-size:9px; font-weight:750; letter-spacing:.03em; white-space:nowrap; pointer-events:none; box-shadow:0 8px 18px rgba(0,53,163,.12); animation:floatLabel 4s ease-in-out infinite alternate; }
-.ml1{left:10%;top:59%;animation-delay:0s}.ml2{left:45%;top:27%;animation-delay:.8s}.ml3{left:54%;top:58%;animation-delay:1.6s}.ml4{right:6%;top:56%;animation-delay:2.4s}
-@keyframes floatLabel{to{transform:translateY(-4px)}}
-@media(max-width:620px){.mapWrap{height:240px;padding:8px}.mapLabel{font-size:7px;padding:5px 7px}}
-
+.mapWrap { position: relative; overflow: hidden; padding: 30px 36px 28px; border: 1px solid #154e88; border-radius: 20px; background: radial-gradient(circle at 48% 44%, #0b3972 0%, #001a4a 66%, #00113f 100%); box-shadow: 0 28px 70px rgba(0,27,74,.18); }
+.mapWrap::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 42%, rgba(45,166,255,.18), transparent 43%); pointer-events: none; }
+.mapTop { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.mapEyebrow { display: inline-flex; align-items: center; gap: 10px; color: #b3e5ff; font-size: 10px; font-weight: 800; letter-spacing: .2em; }
+.mapEyebrow i { width: 7px; height: 7px; border-radius: 50%; background: #38c9ff; box-shadow: 0 0 14px #38c9ff; }
+.mapTopNote { color: #87afcf; font-size: 11px; font-weight: 650; }
+.mapCanvas { position: relative; width: 100%; aspect-ratio: 2 / 1; margin: 6px auto 0; }
+.landMap { object-fit: contain; }
+.routes { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.routes path { fill: none; stroke: #56caff; stroke-width: 1.7; stroke-dasharray: 5 7; opacity: .8; }
+.markerHalo { fill: rgba(49,203,255,.2); stroke: rgba(87,216,255,.42); stroke-width: 1.5; }
+.marker { fill: #7fe0ff; stroke: #fff; stroke-width: 2; filter: drop-shadow(0 0 8px #4dd1ff); }
+.mapLegend { position: relative; z-index: 1; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding-top: 21px; border-top: 1px solid rgba(142,202,245,.18); }
+.region { display: inline-flex; align-items: center; gap: 9px; padding: 9px 13px; border: 1px solid rgba(150,206,247,.2); border-radius: 999px; background: rgba(255,255,255,.055); color: #d7eafb; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.region i { width: 6px; height: 6px; flex: none; border-radius: 50%; background: #55ceff; }
+@media (max-width: 620px) { .mapWrap { padding: 22px 15px 18px; border-radius: 16px; } .mapTop { align-items: flex-start; flex-direction: column; gap: 8px; } .mapEyebrow { font-size: 9px; } .mapCanvas { margin-top: 16px; } .mapLegend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-top: 16px; } .region { justify-content: center; padding: 8px; font-size: 9px; } }

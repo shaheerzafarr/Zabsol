@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import SectionKicker from "@/components/atoms/SectionKicker/SectionKicker";
 import TechBadge from "@/components/atoms/TechBadge/TechBadge";
 import { TECHNOLOGIES_LIST } from "@/data/landingData";
@@ -11,18 +10,13 @@ export default function CapabilitiesSection({ className = "" }) {
     <section className={cn(classes.capabilities, className)} id="capabilities">
       <div className={classes.shell}>
         <div className={classes.capsTop}>
-          <div>
-            <SectionKicker>OUR CAPABILITIES</SectionKicker>
-            <h2>Modern technologies for modern problems.</h2>
-          </div>
-          <a href="#contact" className={classes.outlineBtn}>
-            See All Technologies <ArrowRight size={15} />
-          </a>
+          <SectionKicker className={classes.kicker}>OUR CAPABILITIES</SectionKicker>
+          <h2>A proven stack for <span>ambitious ideas.</span></h2>
         </div>
 
         <div className={classes.techRow}>
-          {TECHNOLOGIES_LIST.map(({ name, accent }, idx) => (
-            <TechBadge key={idx} name={name} accent={accent} />
+          {TECHNOLOGIES_LIST.map((technology) => (
+            <TechBadge key={technology.name} {...technology} />
           ))}
         </div>
       </div>

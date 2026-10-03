@@ -1,13 +1,13 @@
-.cta { padding:96px 0; background:#f3f8fe; }
-.shell { width:min(calc(100% - 96px),1320px); margin:0 auto; }
-.ctaBox { position:relative; overflow:hidden; min-height:250px; display:grid; grid-template-columns:1.2fr .9fr auto; align-items:center; gap:60px; padding:58px 64px; border-radius:10px; background:linear-gradient(120deg,#00113f,#0035a3); box-shadow:0 24px 55px rgba(0,35,96,.22); }
-.ctaBox::after { content:""; position:absolute; width:270px; height:270px; right:-100px; top:-120px; border-radius:50%; border:1px solid rgba(255,255,255,.18); box-shadow:0 0 0 48px rgba(255,255,255,.035),0 0 0 96px rgba(255,255,255,.02); }
-.ctaBox> * { position:relative; z-index:1; }
-.ctaBox h2 { margin:0; font-size:clamp(38px,3.4vw,50px); color:#fff; font-weight:720; letter-spacing:-.045em; }
-.ctaBox p { margin:0; color:#bdd2e9; font-size:15px; line-height:1.7; }
-.btnPrimary { min-height:52px; display:inline-flex; align-items:center; justify-content:center; gap:11px; padding:0 23px; border-radius:6px; font-size:13px; font-weight:750; white-space:nowrap; color:#fff; background:#0166ed; box-shadow:0 12px 28px rgba(1,102,237,.35); transition:transform .2s ease,background .2s ease; }
-.btnPrimary:hover { transform:translateY(-2px); background:#029bfc; }
-@media(max-width:1180px){.shell{width:min(calc(100% - 56px),1320px)}.ctaBox{gap:38px;padding:48px}}
-@media(max-width:900px){.ctaBox{grid-template-columns:1fr;gap:22px}}
-@media(max-width:620px){.cta{padding:64px 0}.shell{width:min(calc(100% - 36px),1320px)}.ctaBox{padding:40px 26px}.btnPrimary{width:100%}}
-
+.cta { padding: 94px 0; background: #f4f8fd; }
+.shell { width: min(calc(100% - 96px), 1320px); margin: 0 auto; }
+.ctaBox { position: relative; overflow: hidden; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 64px 48px; border-radius: 64px; background: linear-gradient(120deg, #00113f, #0035a3); box-shadow: 0 26px 60px rgba(0,35,96,.2); text-align: center; }
+.ctaBox::after { content: ""; position: absolute; width: 380px; height: 380px; right: -130px; top: -170px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; box-shadow: 0 0 0 62px rgba(255,255,255,.035), 0 0 0 125px rgba(255,255,255,.02); pointer-events: none; }
+.ctaBox > * { position: relative; z-index: 1; }
+.ctaBox > div:first-child { display: flex; flex-direction: column; align-items: center; }
+.ctaBox h2 { max-width: 520px; margin: 0; color: #fff; font-size: clamp(40px, 3.5vw, 52px); font-weight: 720; letter-spacing: -.05em; line-height: 1.08; }
+.ctaBox p { max-width: 570px; margin: 0; color: #bdd2e9; font-size: 15px; line-height: 1.7; }
+.btnPrimary { min-width: 260px; min-height: 58px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; margin-top: 8px; padding: 0 34px; border-radius: 999px; background: #0876ff; color: #fff; font-size: 13px; font-weight: 750; white-space: nowrap; box-shadow: 0 12px 28px rgba(1,102,237,.35); transition: transform .2s ease, background .2s ease; }
+.btnPrimary:hover { transform: translateY(-2px); background: #029bfc; }
+@media (max-width: 1180px) { .shell { width: min(calc(100% - 56px), 1320px); } .ctaBox { padding: 56px 40px; } }
+@media (max-width: 900px) { .ctaBox { min-height: 380px; border-radius: 48px; } }
+@media (max-width: 620px) { .cta { padding: 64px 0; } .shell { width: min(calc(100% - 36px), 1320px); } .ctaBox { min-height: 380px; gap: 18px; padding: 48px 26px; border-radius: 34px; } .ctaBox h2 { font-size: 39px; } .btnPrimary { width: 100%; min-width: 0; } }

@@ -1,7 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import SectionKicker from "@/components/atoms/SectionKicker/SectionKicker";
-import MountainGraphic from "@/components/molecules/MountainGraphic/MountainGraphic";
 import { FUTURE_VALUES } from "@/data/landingData";
 import classes from "./FutureBanner.module.css";
 import { cn } from "@/lib/utils";
@@ -14,8 +14,6 @@ export default function FutureBanner({ className = "" }) {
           <SectionKicker>A NEW COMPANY BY DESIGN</SectionKicker>
           <h2>Built for a brighter tomorrow.</h2>
         </div>
-
-        <MountainGraphic />
 
         <div className={classes.futureCopy}>
           <p>
@@ -36,6 +34,15 @@ export default function FutureBanner({ className = "" }) {
             </li>
           ))}
         </ul>
+        <div className={classes.futureVisual}>
+          <Image
+            src="/future-city.webp"
+            alt="Modern city skyline illuminated at dusk"
+            fill
+            sizes="(max-width: 900px) 100vw, 48vw"
+            className={classes.futureImage}
+          />
+        </div>
       </div>
     </section>
   );

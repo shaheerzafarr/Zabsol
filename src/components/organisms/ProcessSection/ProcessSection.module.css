@@ -1,13 +1,8 @@
-.process { padding: 126px 0 132px; background:#fff; }
-.shell { width:min(calc(100% - 96px),1320px); margin:0 auto; }
-.processTop { display:grid; grid-template-columns:1.1fr .9fr; gap:90px; align-items:end; }
-.processTop h2 { max-width:720px; margin:0; font-size:clamp(40px,3.8vw,56px); line-height:1.08; letter-spacing:-.048em; color:#00113f; font-weight:720; }
-.processTopRight { display:grid; grid-template-columns:1fr auto; gap:28px; align-items:center; padding-bottom:5px; }
-.processTopRight p { margin:0; color:#60768b; font-size:15px; line-height:1.7; }
-.outlineBtn { min-height:45px; display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:0 18px; border:1px solid #b7cbe0; border-radius:6px; color:#0035a3; font-size:12px; font-weight:750; white-space:nowrap; transition:all .2s ease; }
-.outlineBtn:hover { border-color:#0166ed; transform:translateY(-2px); }
-.processFlow { display:grid; grid-template-columns:repeat(5,1fr); gap:34px; margin-top:72px; }
-@media(max-width:1180px){.shell{width:min(calc(100% - 56px),1320px)}.processTop{gap:50px}}
-@media(max-width:900px){.processTop{grid-template-columns:1fr;gap:22px}.processTopRight{max-width:none}.processFlow{grid-template-columns:1fr 1fr;gap:34px}}
-@media(max-width:620px){.process{padding:84px 0}.shell{width:min(calc(100% - 36px),1320px)}.processTopRight{grid-template-columns:1fr}.processFlow{grid-template-columns:1fr;margin-top:48px}.outlineBtn{width:100%}}
-
+.process { position: relative; overflow: hidden; padding: clamp(92px, 9vw, 132px) 0; background: linear-gradient(180deg, #fff 0%, #f5f9fe 100%); }
+.shell { width: min(calc(100% - 96px), 1320px); margin: 0 auto; }
+.processTop h2 { max-width: 850px; margin: 0; color: #00113f; font-size: clamp(42px, 4vw, 58px); font-weight: 720; letter-spacing: -.05em; line-height: 1.08; }
+.processFlow { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 70px; }
+.processFlow::before { content: ""; position: absolute; top: 35px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, #80cfff, #0166ed 50%, #80cfff); }
+@media (max-width: 1180px) { .shell { width: min(calc(100% - 56px), 1320px); } .processFlow { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 16px; } .processFlow::before { display: none; } }
+@media (max-width: 900px) { .processFlow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .process { padding: 82px 0; } .shell { width: min(calc(100% - 36px), 1320px); } .processTop h2 { font-size: 40px; } .processFlow { grid-template-columns: 1fr; gap: 15px; margin-top: 44px; } }

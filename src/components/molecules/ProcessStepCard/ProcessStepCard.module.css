@@ -1,10 +1,12 @@
-.card { position:relative; display:grid; grid-template-columns:56px 1fr; gap:16px; padding-top:22px; border-top:2px solid #dce8f4; }
-.card::before { content:""; position:absolute; left:0; top:-2px; width:42px; height:2px; background:#0166ed; }
-.processIcon { width:52px; height:52px; display:grid; place-items:center; border:1px solid #bbd7ee; border-radius:8px; background:#f3f8fe; color:#0166ed; font-weight:700; transition:all .2s ease; }
-.card:hover .processIcon { border-color:#0166ed; background:#0166ed; color:#fff; transform:translateY(-3px); }
-.processIcon svg { width:22px; height:22px; }.processIcon span{font-size:16px}
-.title { margin:3px 0 8px; font-size:15px; font-weight:750; color:#00113f; }
-.desc { margin:0; color:#687d90; font-size:12px; line-height:1.6; }
-.processArrow { position:absolute; top:-10px; right:-27px; width:17px; height:17px; color:#75a9d1; }
-@media(max-width:900px){.processArrow{display:none}}
-
+.card { position: relative; min-width: 0; display: flex; flex-direction: column; align-items: center; }
+.processIcon { position: relative; z-index: 1; width: 72px; height: 72px; display: grid; place-items: center; flex: none; border: 2px solid #b9ddf9; border-radius: 50%; background: #fff; color: #0166ed; box-shadow: 0 0 0 8px #eef7ff, 0 12px 24px rgba(0,53,163,.12); transition: transform .25s ease, background .25s ease, color .25s ease; }
+.processIcon svg { width: 28px; height: 28px; stroke-width: 1.8; }
+.processIcon span { font-size: 18px; font-weight: 750; }
+.card:hover .processIcon { transform: translateY(-4px); background: #0166ed; color: #fff; }
+.cardContent { width: 100%; min-height: 205px; margin-top: 30px; padding: 27px 23px 28px; border: 1px solid #dce9f5; border-radius: 15px; background: #fff; box-shadow: 0 14px 32px rgba(0,38,85,.045); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.card:hover .cardContent { transform: translateY(-4px); border-color: #a5d3f5; box-shadow: 0 22px 46px rgba(0,53,163,.11); }
+.stepNumber { color: #0166ed; font-size: 10px; font-weight: 800; letter-spacing: .2em; }
+.title { margin: 24px 0 9px; color: #00113f; font-size: 18px; font-weight: 750; letter-spacing: -.02em; }
+.desc { margin: 0; color: #63798d; font-size: 12px; line-height: 1.7; }
+@media (max-width: 620px) { .card { display: grid; grid-template-columns: 58px minmax(0, 1fr); align-items: start; gap: 16px; } .processIcon { width: 54px; height: 54px; box-shadow: 0 0 0 5px #eef7ff; } .processIcon svg { width: 23px; height: 23px; } .cardContent { min-height: 0; margin-top: 0; padding: 22px; } .title { margin-top: 13px; } }
+@media (prefers-reduced-motion: reduce) { .processIcon, .cardContent { transition: none; } }
